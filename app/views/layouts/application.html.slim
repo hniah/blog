@@ -2,9 +2,15 @@ doctype html
 html
   head
     title
-      | Website
+      | Myapp
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    = yield
+    section#main-body
+      .container
+        header#header
+          = render partial: 'shared/header'
+        .row
+          .flash-messages= flash_messages
+          .content-body == yield
