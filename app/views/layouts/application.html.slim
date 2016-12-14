@@ -12,5 +12,7 @@ html
         header#header
           = render partial: 'shared/header'
         .row
-          .flash-messages= flash_messages
-          .content-body == yield
+        	.col-md-12
+          		.flash-messages= flash_messages
+        .row
+        	.content-body == yield

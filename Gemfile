@@ -28,6 +28,7 @@ gem 'slim' #Layout engine
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails_utils' # Generate flash message (Bootstrap)
 gem 'font-awesome-rails'
+gem 'rails_admin'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
