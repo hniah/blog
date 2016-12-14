@@ -31,16 +31,16 @@ gem 'font-awesome-rails'
 gem 'rails_admin'
 
 group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
-group :development do
+  gem 'rspec-rails' # After bundle, run: 
   gem 'spring'
   gem 'better_errors'
   gem 'pry'
   gem 'letter_opener'
   gem 'binding_of_caller'
+  gem "factory_girl_rails"
+  gem 'shoulda'
+  gem "awesome_print"
+  gem "capybara" # add "require 'capybara/rspec'" to spec_helper
 end
 
 
