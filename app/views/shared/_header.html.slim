@@ -1,12 +1,14 @@
+
 nav.navbar.navbar-default
   .container-fluid
     .navbar-header
       .navbar-brand
         = link_to image_tag('logo.jpg'), root_path
-    ul.nav.navbar-nav.navbar-right.settings
+    ul#sidebar-nav.nav.navbar-nav.navbar-right.settings
       - if user_signed_in?
         li.setting = link_to fa_icon('share'), 
           destroy_user_session_path, 
           method: :delete, 
           title: 'Log out',
           data: {toggle: 'tooltip', placement: 'bottom', confirm: 'Are you sure you want to sign out?'}
+      li = link_to 'Categories', categories_path

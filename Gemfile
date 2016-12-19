@@ -32,9 +32,7 @@ gem 'rails_admin'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 
-  gem 'spring'
   gem 'better_errors'
-  gem 'pry'
   gem 'letter_opener'
   gem 'binding_of_caller'
   gem "factory_girl_rails"
