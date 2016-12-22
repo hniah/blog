@@ -3,9 +3,11 @@ Rails.application.routes.draw do
 
   root to: 'home#index'
   resources :categories
+  
   namespace :admin do
     get 'dashboard' => 'dashboard#index'
     get '/' => 'dashboard#index'
+    resources :categories
     resources :blogs
   end
 
