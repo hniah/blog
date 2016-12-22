@@ -48,5 +48,5 @@ group :production do
   gem 'puma'
 end
 
-gem 'adminlte-rails'
+gem 'adminlte2-rails'
 gem 'seedbank'

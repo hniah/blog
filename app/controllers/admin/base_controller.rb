@@ -1,6 +1,6 @@
 class Admin::BaseController < ApplicationController
   before_filter :authenticate_user!
-  layout 'admin'
+  layout 'admin_lte_2'
 
   def authenticate_admin!
     unless current_user.is_admin?
