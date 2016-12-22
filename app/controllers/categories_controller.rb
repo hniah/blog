@@ -14,6 +14,7 @@ class CategoriesController < ApplicationController
 		else
 			flash[:alert] = @category.errors.full_messages.join('</br>')
 			render :new
+		end
 	end
 
 	def edit
@@ -36,7 +37,7 @@ class CategoriesController < ApplicationController
 		params.require(:category).permit(:title, :description, :user_id)
 	end
 
-	def 
+	def category_id
 		params.require(:id)
 	end
 end
