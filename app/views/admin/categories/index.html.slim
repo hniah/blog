@@ -1,8 +1,21 @@
-#wrap-all-categories.col-md-12
-	h1.head-title List of categories 
-	.bound-categories.row
-		- @categories.each do |category|
-			.item.col-md-4
-				.bound-item
-					h3.title =category.title
-					div.desc =category.description
+#wrap-all-categories.row
+	.col-xs-12
+		.box
+			.box-header
+				h3.box-title Categories
+				= link_to "Create new", new_admin_category_path, :class => "btn btn-primary"
+			.box-body
+				table.table.table-bordered.table-hover
+					thead
+						tr
+							th ID
+							th Title
+							th Description
+							th Action
+					tbody
+						- @categories.each do |category|
+							tr.item
+								td =category.id
+								td =category.title
+								td =category.description
+								td = link_to 'Edit', edit_admin_category_path(category.id)

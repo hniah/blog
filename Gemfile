@@ -29,6 +29,7 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails_utils' # Generate flash message (Bootstrap)
 gem 'font-awesome-rails'
 gem 'rails_admin'
+gem 'simple_form'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 

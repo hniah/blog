@@ -19,10 +19,11 @@ aside.main-sidebar
       li.header
         | HEADER
       li.active
-        a[href="#"]
-          i.fa.fa-link
-          span
-            | Link
+        = link_to admin_categories_path do
+            i.fa.fa-link
+            span
+              | Categories
+        end
       li
         a[href="#"]
           i.fa.fa-link
