@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :admins, controllers: { 
+                                      sessions: 'devise_custom/admin_sessions'
+                                    }
   devise_for :users
 
   root to: 'home#index'

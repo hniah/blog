@@ -1,0 +1,8 @@
+#wrap-all-categories.col-md-12
+	h1.head-title List of categories 
+	.bound-categories.row
+		- @categories.each do |category|
+			.item.col-md-4
+				.bound-item
+					h3.title =category.title
+					div.desc =category.description
