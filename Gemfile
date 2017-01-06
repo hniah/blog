@@ -36,6 +36,7 @@ gem 'simple-navigation'
 gem 'simple-navigation-bootstrap'
 gem 'adminlte2-rails'
 gem 'seedbank'
+gem "cancan"
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 

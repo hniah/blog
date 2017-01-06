@@ -1,4 +1,5 @@
 class Admin::BlogsController < Admin::BaseController
+	
 	def index
 		@blogs = Blog.paginate(:page => params[:page]).order('created_at DESC')
 	end

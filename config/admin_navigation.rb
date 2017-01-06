@@ -4,7 +4,7 @@ SimpleNavigation::Configuration.run do |navigation|
   	primary.dom_class = 'sidebar-menu'
     primary.selected_class = 'active'
 
-    primary.item :home, fa_icon('home', text: '<span>Home</span>'.html_safe), admin_dashboard_path
+    primary.item :home, fa_icon('home', text: '<span>Home</span>'.html_safe), admin_dashboards_path
 
 
     primary.item :categories, fa_icon('envelope', text: '<span>Categories</span>'.html_safe), admin_categories_path

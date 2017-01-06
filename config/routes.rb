@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   resources :blogs
   
   namespace :admin do
-    get 'dashboard' => 'dashboard#index'
-    get '/' => 'dashboard#index'
+    get '/' => 'dashboards#index'
+    resources :dashboards, only: [:index]
     resources :categories
     resources :blogs
   end
