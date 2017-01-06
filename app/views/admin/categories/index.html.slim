@@ -19,3 +19,5 @@
 								td =category.title
 								td =category.description
 								td = link_to 'Edit', edit_admin_category_path(category.id)
+			.bound-pagination
+				= will_paginate @categories, renderer: BootstrapPagination::Rails

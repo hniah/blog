@@ -1,6 +1,6 @@
 class Admin::BlogsController < Admin::BaseController
 	def index
-		@blogs = Blog.all
+		@blogs = Blog.paginate(:page => params[:page]).order('created_at DESC')
 	end
 
 	def new 
@@ -9,7 +9,7 @@ class Admin::BlogsController < Admin::BaseController
 
 	def create 
 		@blog = Blog.new(blog_params.merge(admin: current_admin))
-	
+
 		if @blog.save
 			redirect_to admin_blogs_path, notice: t('.message.success')
 		else

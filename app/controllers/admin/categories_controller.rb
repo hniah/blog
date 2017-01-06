@@ -1,6 +1,6 @@
 class Admin::CategoriesController < Admin::BaseController
 	def index
-		@categories = Category.all
+		@categories = Category.paginate(:page => params[:page]).order('created_at DESC')
 	end
 	def new
 		@category = Category.new

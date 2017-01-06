@@ -30,7 +30,8 @@ gem 'rails_utils' # Generate flash message (Bootstrap)
 gem 'font-awesome-rails'
 gem 'rails_admin'
 gem 'simple_form'
-gem 'paper_trail'
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 
