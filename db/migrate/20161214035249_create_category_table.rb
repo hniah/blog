@@ -3,7 +3,7 @@ class CreateCategoryTable < ActiveRecord::Migration
     create_table :categories do |t|
     	t.string :title
     	t.text :description
-    	t.references :admin
+    	t.references :user
     	t.timestamps
     end
   end

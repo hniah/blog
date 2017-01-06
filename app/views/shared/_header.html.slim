@@ -7,22 +7,8 @@
         span.icon-bar
         span.icon-bar
         span.icon-bar
-      a.navbar-brand href="#"  Blog Demo
+      = link_to "Blog Demo", root_path, class: 'navbar-brand'
     /! Collect the nav links, forms, and other content for toggling
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       = render_navigation :expand_all => true, :renderer => :bootstrap
 
-nav.navbar.navbar-default
-  .container-fluid
-    .navbar-header
-      .navbar-brand
-        = link_to image_tag('logo.jpg'), root_path
-    ul#sidebar-nav.nav.navbar-nav.navbar-right.settings
-      - if user_signed_in?
-        li.setting = link_to fa_icon('share'), 
-          destroy_user_session_path, 
-          method: :delete, 
-          title: 'Log out',
-          data: {toggle: 'tooltip', placement: 'bottom', confirm: 'Are you sure you want to sign out?'}
-      li = link_to 'Categories', categories_path
-    = render_navigation :expand_all => true, :renderer => :bootstrap

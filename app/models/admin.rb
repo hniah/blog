@@ -1,11 +1,9 @@
-class Admin < ActiveRecord::Base
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable and :omniauthable
-  	devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+class Admin < User
 
-
-    has_many :categories
-    has_many :blogs       
+	default_scope -> { where(is_admin: true) }
+	validates :is_admin, acceptance: {:accept => true}
+	
+	has_many :categories
+	has_many :blogs       
 end
 

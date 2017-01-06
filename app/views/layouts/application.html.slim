@@ -7,12 +7,11 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
-    section#main-body
-      .container
-        header#header
-          = render partial: 'shared/header'
-        .row
-        	.col-md-12
-          		.flash-messages= flash_messages
-        .row
-        	.content-body == yield
+    = render partial: 'shared/header'
+    .container
+      .row
+      	.col-md-12
+        		.flash-messages= flash_messages
+    .container
+      .row
+      	.content-body == yield

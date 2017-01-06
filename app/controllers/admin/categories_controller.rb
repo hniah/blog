@@ -7,7 +7,7 @@ class Admin::CategoriesController < Admin::BaseController
 	end
 
 	def create
-		@category = Category.new(category_params)
+		@category = Category.new(category_params.merge(user: current_admin))
 		if @category.save
 			redirect_to admin_categories_path, notice: t('.message.success')
 		else
@@ -32,7 +32,7 @@ class Admin::CategoriesController < Admin::BaseController
 		
 	private
 	def category_params
-		params.require(:category).permit(:title, :description, :admin_id)
+		params.require(:category).permit(:title, :description)
 	end
 
 	def category_id

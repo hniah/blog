@@ -5,7 +5,7 @@ class CreateBlogTable < ActiveRecord::Migration
 	    	t.text		:description
 	    	t.string	:photo
 	    	t.references :category
-	    	t.references :admin
+	    	t.references :user
 	    	t.timestamps
 	    end
   	end
