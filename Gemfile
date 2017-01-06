@@ -34,6 +34,8 @@ gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
 gem 'simple-navigation'
 gem 'simple-navigation-bootstrap'
+gem 'adminlte2-rails'
+gem 'seedbank'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 
@@ -50,8 +52,6 @@ end
 
 group :production do
   gem 'rails_12factor'
-  gem 'puma'
+  #gem 'puma'
 end
 
-gem 'adminlte2-rails'
-gem 'seedbank'

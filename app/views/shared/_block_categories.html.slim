@@ -1,0 +1,9 @@
+- @categories = Category.all
+.well
+  h4 Categories blog
+  .row
+  	.col-md-12
+  		ul.list-unstyled
+  			- @categories.each do |category|
+  				li
+  					= link_to category.title, category_path(category)

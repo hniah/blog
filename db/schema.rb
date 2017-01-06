@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170106063711) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
+    t.text     "short_desc"
     t.text     "description"
     t.string   "photo"
     t.integer  "category_id"

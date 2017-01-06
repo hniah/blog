@@ -8,7 +8,7 @@ class Admin::BlogsController < Admin::BaseController
 	end
 
 	def create 
-		@blog = Blog.new(blog_params.merge(admin: current_admin))
+		@blog = Blog.new(blog_params.merge(user: current_admin))
 
 		if @blog.save
 			redirect_to admin_blogs_path, notice: t('.message.success')
@@ -34,7 +34,7 @@ class Admin::BlogsController < Admin::BaseController
 
 	private 
 	def blog_params
-		params.require(:blog).permit(:title, :description, :category_id)
+		params.require(:blog).permit(:title, :short_desc, :description, :category_id)
 	end
 
 	def blog_id

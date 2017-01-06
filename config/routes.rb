@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  root to: 'home#index'
-  resources :categories, only: [:index]
-  resources :blogs, only: [:index]
+  root to: 'blogs#index'
+  resources :categories
+  resources :blogs
   
   namespace :admin do
     get 'dashboard' => 'dashboard#index'

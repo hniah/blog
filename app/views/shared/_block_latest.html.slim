@@ -1,0 +1,7 @@
+- @blog = Blog.latest
+- unless @blog.nil?
+	.well
+		h4 = @blog.title
+		p = @blog.short_desc
+end
+

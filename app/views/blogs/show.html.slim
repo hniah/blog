@@ -1,0 +1,18 @@
+#wrap_blog_detail
+	.slideleft.col-lg-8
+		.bound-item
+			= link_to blog_path(@blog)
+				h4 =@blog.title
+			p.lead 
+				by 
+				=@blog.user_full_name
+			p
+				span.glyphicon.glyphicon-time
+					| Posted on 
+					=@blog.created_at
+			p.lead =@blog.short_desc
+			p =@blog.description
+	.slideright.col-lg-4
+		= render partial: 'shared/block_search'
+		= render partial: 'shared/block_categories'
+		= render partial: 'shared/block_latest'

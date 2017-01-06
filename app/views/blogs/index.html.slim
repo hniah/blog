@@ -1,11 +1,11 @@
 #wrap_home_page
 	.slideleft.col-lg-8
-		- @blog.each do |blog|
+		- @blogs.each do |blog|
 			.bound-item
 				= link_to blog_path(blog)
 					h4 =blog.title
 				p.lead 
-					by 
+					by =blog.user_full_name
 				p
 					span.glyphicon.glyphicon-time
 						| Posted on 
