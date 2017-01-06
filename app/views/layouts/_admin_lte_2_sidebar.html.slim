@@ -18,17 +18,18 @@ aside.main-sidebar
     ul.sidebar-menu
       li.header
         | HEADER
-      li.active
+      li
         = link_to admin_categories_path do
             i.fa.fa-link
             span
               | Categories
         end
       li
-        a[href="#"]
-          i.fa.fa-link
-          span
-            | Another Link
+        = link_to admin_blogs_path do
+            i.fa.fa-link
+            span
+              | Blogs
+        end
       li.treeview
         a[href="#"]
           i.fa.fa-link

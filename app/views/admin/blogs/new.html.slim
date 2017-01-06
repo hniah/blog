@@ -1,0 +1,7 @@
+#wrap_blog_new.row
+	.col-md-6
+		.box.box-primary
+			.box-header.with-border
+				h3.box-title 
+					| New blog
+				= render partial: 'form', locals: {blog: @blog}

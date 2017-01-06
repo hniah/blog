@@ -1,0 +1,23 @@
+#wrap-all-categories.row
+	.col-xs-12
+		.box
+			.box-header
+				h3.box-title Blogs
+				= link_to "Create new", new_admin_blog_path, :class => "btn btn-primary"
+			.box-body
+				table.table.table-bordered.table-hover
+					thead
+						tr
+							th ID
+							th Title
+							th Category
+							th Description
+							th Action
+					tbody
+						- @blogs.each do |blog|
+							tr.item
+								td =blog.id
+								td =blog.title
+								td =blog.category_title
+								td =blog.description
+								td = link_to 'Edit', edit_admin_blog_path(blog.id)

@@ -30,6 +30,7 @@ gem 'rails_utils' # Generate flash message (Bootstrap)
 gem 'font-awesome-rails'
 gem 'rails_admin'
 gem 'simple_form'
+gem 'paper_trail'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 
