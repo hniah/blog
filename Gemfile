@@ -43,8 +43,8 @@ group :development, :test do
   gem "factory_girl_rails"
   gem 'shoulda'
   gem "awesome_print"
-  gem 'binding_of_caller'
   gem "capybara" # add "require 'capybara/rspec'" to spec_helper
+  gem 'pry-rails'
 end
 
 
