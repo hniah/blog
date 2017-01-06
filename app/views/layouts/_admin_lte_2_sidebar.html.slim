@@ -15,31 +15,4 @@ aside.main-sidebar
         span.input-group-btn
           button#search-btn.btn.btn-flat[type="submit" name="search"]
             i.fa.fa-search
-    ul.sidebar-menu
-      li.header
-        | HEADER
-      li
-        = link_to admin_categories_path do
-            i.fa.fa-link
-            span
-              | Categories
-        end
-      li
-        = link_to admin_blogs_path do
-            i.fa.fa-link
-            span
-              | Blogs
-        end
-      li.treeview
-        a[href="#"]
-          i.fa.fa-link
-          span
-            | Multilevel
-          i.fa.fa-angle-left.pull-right
-        ul.treeview-menu
-          li
-            a[href="#"]
-              | Link in level 2
-          li
-            a[href="#"]
-              | Link in level 2
+    = render_navigation context: :admin, :expand_all => true, :renderer => :bootstrap

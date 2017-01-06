@@ -215,6 +215,11 @@ GEM
     shoulda-context (1.2.2)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
+    simple-navigation (3.14.0)
+      activesupport (>= 2.3.2)
+    simple-navigation-bootstrap (1.0.2)
+      railties (>= 3.1)
+      simple-navigation (>= 3.7.0, < 4.0.0)
     simple_form (3.3.1)
       actionpack (> 4, < 5.1)
       activemodel (> 4, < 5.1)
@@ -275,6 +280,8 @@ DEPENDENCIES
   sdoc (~> 0.4.0)
   seedbank
   shoulda
+  simple-navigation
+  simple-navigation-bootstrap
   simple_form
   slim
   turbolinks
