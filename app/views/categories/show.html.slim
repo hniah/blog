@@ -1,0 +1,21 @@
+#wrap_category_detail
+	.slideleft.col-lg-8
+		.bound-category
+			h3.title =@category.title
+			div.desc =@category.description
+		.bound-blogs
+			- @blogs.each do |blog|
+				.bound-item
+					= link_to blog_path(blog)
+						h4 =blog.title
+					p.lead 
+						by =blog.user_full_name
+					p
+						span.glyphicon.glyphicon-time
+							| Posted on 
+							=blog.created_at
+					p =blog.short_desc
+	.slideright.col-lg-4
+		= render partial: 'shared/block_search'
+		= render partial: 'shared/block_categories'
+		= render partial: 'shared/block_latest'

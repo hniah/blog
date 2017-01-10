@@ -1,9 +1,8 @@
 class Admin < User
 
-	default_scope -> { where(is_admin: true) }
-	validates :is_admin, acceptance: {:accept => true}
+	default_scope -> { where(role: :admin) }
+	validates :role, acceptance: {:accept => :admin}
 	
-	has_many :categories
-	has_many :blogs       
+	     
 end
 

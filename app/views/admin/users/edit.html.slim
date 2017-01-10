@@ -1,0 +1,4 @@
+#users-edit-container
+  h1 = @user.full_name
+
+  = render 'admin/users/form', { user: @user, url: admin_user_path(@user) }

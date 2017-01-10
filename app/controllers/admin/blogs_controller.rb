@@ -4,12 +4,16 @@ class Admin::BlogsController < Admin::BaseController
 		@blogs = Blog.paginate(:page => params[:page]).order('created_at DESC')
 	end
 
+	def show
+		@blog = Blog.find(blog_id)
+	end
+
 	def new 
 		@blog = Blog.new
 	end
 
 	def create 
-		@blog = Blog.new(blog_params.merge(user: current_admin))
+		@blog = Blog.new(blog_params.merge(user: current_user))
 
 		if @blog.save
 			redirect_to admin_blogs_path, notice: t('.message.success')
@@ -30,6 +34,17 @@ class Admin::BlogsController < Admin::BaseController
 		else
 			render :edit, failure: t('message.failure')
 		end
+	end
+
+	def destroy
+		@blog = Blog.find(blog_id)
+		if @blog.destroy
+			flash[:notice] = 'Blog has been deleted.'
+		else
+			flash[:notice] = @blog.errors.full_messages.join('</br>')
+		end
+
+		redirect_to :back
 	end
 
 

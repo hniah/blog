@@ -1,0 +1,16 @@
+.blog-details-container
+  table.table.table-bordered
+    tr 
+      th = Blog.human_attribute_name(:title)
+      td = blog.title
+    tr 
+      th = Blog.human_attribute_name(:short_desc)
+      td = blog.short_desc
+    tr 
+      th = Blog.human_attribute_name(:description)
+      td = blog.description
+  
+
+  - if current_user.role.admin?
+    .text-right
+      = link_to 'Edit Blog', edit_blog_path, remote: true, class: 'btn btn-default'

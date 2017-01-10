@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
+gem 'rails', '4.2.7.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.15'
 # Use SCSS for stylesheets
@@ -28,7 +28,6 @@ gem 'slim' #Layout engine
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'rails_utils' # Generate flash message (Bootstrap)
 gem 'font-awesome-rails'
-gem 'rails_admin'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.1.0'
 gem 'will_paginate-bootstrap'
@@ -36,7 +35,8 @@ gem 'simple-navigation'
 gem 'simple-navigation-bootstrap'
 gem 'adminlte2-rails'
 gem 'seedbank'
-gem "cancan"
+gem "cancancan"
+gem 'enumerize' # Enum in Rails
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 

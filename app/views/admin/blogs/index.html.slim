@@ -20,6 +20,13 @@
 								td =blog.title
 								td =blog.category_title
 								td =blog.description
-								td = link_to 'Edit', edit_admin_blog_path(blog.id)
+								td 
+									ul.actions.list-inline
+										li = link_to 'View', admin_blog_path(blog), remote: true
+										li = link_to 'Edit', edit_admin_blog_path(blog)
+										li = link_to 'Delete', 
+											admin_blog_path(blog),
+						          method: :delete, 
+						          data: {toggle: 'tooltip', placement: 'bottom', confirm: 'Are you sure you want to delete?'}
 			.bound-pagination
 				= will_paginate @blogs, renderer: BootstrapPagination::Rails

@@ -9,7 +9,8 @@ Rails.application.routes.draw do
     get '/' => 'dashboards#index'
     resources :dashboards, only: [:index]
     resources :categories
-    resources :blogs
+    resources :blogs 
+    resources :users
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

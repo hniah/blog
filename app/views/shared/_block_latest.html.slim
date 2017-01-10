@@ -1,5 +1,5 @@
 - @blog = Blog.latest
-- unless @blog.nil?
+- if @blog.present?
 	.well
 		h4 = @blog.title
 		p = @blog.short_desc

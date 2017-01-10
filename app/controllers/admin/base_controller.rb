@@ -1,7 +1,10 @@
 class Admin::BaseController < ApplicationController
+	include PopupHelper
+  before_filter :authenticate_user!, :authenticate_admin!
   before_action :configure_permitted_parameters, if: :devise_controller?
   layout 'admin_lte_2'
-  load_and_authorize_resource
+  
+  load_and_authorize_resource except: :create
 
   protected
   def configure_permitted_parameters
@@ -10,7 +13,7 @@ class Admin::BaseController < ApplicationController
 
 
   def authenticate_admin!
-    unless current_user.is_admin?
+    unless current_user.role.admin?
       redirect_to root_path, alert: 'You are not allowed to visit this page'
     end
   end

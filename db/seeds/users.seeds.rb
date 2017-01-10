@@ -7,8 +7,8 @@ puts "==== End ===="
 
 puts "==== Create Admin ===="
 User.create([
-  { full_name: 'Admin', email: 'admin@example.com', password: '123123123', confirmed_at: Date.today, is_admin: true },
-  { full_name: 'Nicholas', email: 'nicholas@foodxervices.com', password: '123123123', confirmed_at: Date.today, is_admin: true }
+  { full_name: 'Admin', email: 'admin@example.com', password: '123123123', confirmed_at: Date.today, role: :admin },
+  { full_name: 'Nicholas', email: 'nicholas@foodxervices.com', password: '123123123', confirmed_at: Date.today, role: :admin }
 ])
 puts "==== End ===="
 
