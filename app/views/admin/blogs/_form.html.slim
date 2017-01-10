@@ -1,14 +1,17 @@
 .form-wrapper
 	= simple_form_for [:admin, blog] do |f|
 		.form-inputs.box-body
-		    .form-group
-		    	= f.association :category, label_method: :title
-		    .form-group
-		    	= f.input :title
-		    .form-group
-		    	= f.input :short_desc
-		    .form-group
-		    	= f.input :description
-		    .btn-group
-		      = f.submit class: 'btn btn-primary'
-		      = link_to 'Back', admin_blogs_path, class: 'btn btn-gray'
+				.form-group
+					= f.association :category, label_method: :title, include_blank: "Please Select"
+				.form-group
+					= f.input :title
+				.form-group
+					= f.input :photo, as: :file
+					= image_tag blog.photo.url(:thumb) if blog.photo.present?
+				.form-group
+					= f.input :short_desc
+				.form-group
+					= f.input :description
+				.btn-group
+					= f.submit class: 'btn btn-primary'
+					= link_to 'Back', admin_blogs_path, class: 'btn btn-gray'

@@ -50,7 +50,7 @@ class Admin::BlogsController < Admin::BaseController
 
 	private 
 	def blog_params
-		params.require(:blog).permit(:title, :short_desc, :description, :category_id)
+		params.require(:blog).permit(:title, :short_desc, :description, :photo, :category_id)
 	end
 
 	def blog_id

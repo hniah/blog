@@ -9,7 +9,7 @@
 				p
 					span.glyphicon.glyphicon-time
 						| Posted on 
-						=blog.created_at
+						=blog.created_at.strftime('%d %B %Y');
 				p =blog.short_desc
 	.slideright.col-lg-4
 		= render partial: 'shared/block_search'

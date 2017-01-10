@@ -37,6 +37,7 @@ gem 'adminlte2-rails'
 gem 'seedbank'
 gem "cancancan"
 gem 'enumerize' # Enum in Rails
+gem 'paperclip'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 

@@ -9,8 +9,11 @@
     tr 
       th = Blog.human_attribute_name(:description)
       td = blog.description
+    tr
+      th = Blog.human_attribute_name(:photo)
+      td = image_tag(blog.photo.url(:thumb))
   
 
   - if current_user.role.admin?
     .text-right
-      = link_to 'Edit Blog', edit_blog_path, remote: true, class: 'btn btn-default'
+      = link_to 'Edit Blog', edit_admin_blog_path(blog), class: 'btn btn-default'

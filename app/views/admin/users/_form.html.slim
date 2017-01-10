@@ -8,7 +8,7 @@
           = f.input :password, hint: "leave it blank if you don't want to change it"
           = f.input :password_confirmation
           / = f.input :avatar
-          = f.input :role, as: :select, label: "Role", include_blank: "Please Select"
+          = f.input :role, as: :select, label: "Role", include_blank: "--Please Select--"
         / .col-md-6
         /   = image_tag(user.avatar.url(:small))
     .form-actions

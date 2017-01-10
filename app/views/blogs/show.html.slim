@@ -3,13 +3,14 @@
 		.bound-item
 			= link_to blog_path(@blog)
 				h4 =@blog.title
+			p = image_tag(@blog.photo.url(:original), :style => "max-width: 100%")
 			p.lead 
 				by 
 				=@blog.user_full_name
 			p
 				span.glyphicon.glyphicon-time
 					| Posted on 
-					=@blog.created_at
+					=@blog.created_at.strftime('%d %B %Y');
 			p.lead =@blog.short_desc
 			p =@blog.description
 	.slideright.col-lg-4
