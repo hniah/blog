@@ -51,6 +51,15 @@ group :development, :test do
   gem 'pry-rails'
 end
 
+group :development do
+  gem 'capistrano', require: false
+  gem 'capistrano-rails', require: false
+  gem 'capistrano-rvm', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-sidekiq', require: false
+  gem 'capistrano-npm'
+end
 
 group :production do
   gem 'rails_12factor'
