@@ -38,6 +38,7 @@ gem 'seedbank'
 gem "cancancan"
 gem 'enumerize' # Enum in Rails
 gem 'paperclip'
+gem 'puma'
 
 group :development, :test do
   gem 'rspec-rails' # After bundle, run: 
@@ -60,9 +61,3 @@ group :development do
   gem 'capistrano-sidekiq', require: false
   gem 'capistrano-npm'
 end
-
-group :production do
-  gem 'rails_12factor'
-  #gem 'puma'
-end
-
