@@ -9,7 +9,6 @@ set :pty, true
 set :linked_files, %w{config/database.yml config/application.yml}
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/uploads}
 set :keep_releases, 5
-set :rvm_type, :user
 set :bundle_bin, '/home/deploy/.rvm/gems/ruby-2.3.1/bin/bundle'
 
 set :puma_rackup, -> {File.join(current_path, "config.ru")}
