@@ -8,9 +8,10 @@
 # server "db.example.com", user: "deploy", roles: %w{db}
 
 
-server '18.224.229.98', user: 'deploy', roles: [:web, :app], primary: true
+server '18.224.229.98', user: 'deploy', roles: [:web, :app]
 set :branch, 'master'
-
+set :stage, :production
+set :rails_env, :production
 # role-based syntax
 # ==================
 
